@@ -1,0 +1,9 @@
+{% if latest_temps_list %}
+    <ul>
+    {% for temp in latest_temps_list %}
+        <li><a href="/djangoblaz/{{ temp.temp_value }}/">{{temp.time_measured}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No measurements are available.</p>
+{% endif %}

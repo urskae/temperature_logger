@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Blaz measuring temperature</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Your archive of measurements</a></h1>
+        </div>
+
+        <div>
+            
+            <h2><a href="">Find your measurements</a></h2>
+            
+        </div>
+        
+        {% for temp in temps %}
+            <div>
+                
+                <h2><a href="">{{ temp.temp_value }}</a></h2>
+                <p>measured: {{ temp.time_measured }}</p>
+                <p>{{ linebreaks }}</p>
+            </div>
+        {% endfor %}
+        
+        
+    </body>
+</html>
